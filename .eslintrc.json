@@ -1,0 +1,71 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "prettier",
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "react/no-children-prop": "off",
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "indent": [
+      "error",
+      4
+    ],
+    "no-unused-vars": "error",
+    "array-bracket-spacing": "error",
+    "react/boolean-prop-naming": [
+      "error",
+      {
+        "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+        "message": "is/has prefix is required"
+      }
+    ],
+    "react/button-has-type": "error",
+    "brace-style": [
+      "error",
+      "1tbs",
+      {
+        "allowSingleLine": true
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "semi": [
+      "error",
+      "never"
+    ]
+  }
+}
