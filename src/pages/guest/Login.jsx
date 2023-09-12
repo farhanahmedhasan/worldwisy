@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import styles from "./Login.module.css"
 import { Link } from "react-router-dom"
-import PageNav from "../components/PageNav.jsx"
+import PageNav from "../../components/guest/PageNav.jsx"
 
 export default function Login() {
     // PRE-FILL FOR DEV PURPOSES
@@ -29,7 +29,7 @@ export default function Login() {
                 </div>
 
                 <div>
-                    <Link to="%%%" type="button" className="cta">
+                    <Link to="/app" type="button" className="cta">
                         Login
                     </Link>
                 </div>

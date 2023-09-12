@@ -1,4 +1,4 @@
-import PageNav from "../components/PageNav.jsx"
+import PageNav from "../../components/guest/PageNav.jsx"
 
 import styles from "./Home.module.css"
 import { Link } from "react-router-dom"
