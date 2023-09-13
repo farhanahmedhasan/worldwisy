@@ -1,9 +1,12 @@
+import Sidebar from "../../components/auth/sidebar/Sidebar.jsx"
 import styles from "./AppLayout.module.css"
+import Map from "../../components/auth/map/Map.jsx"
 
 export default function AppLayout() {
     return (
-        <main>
-            <h1>Applayout</h1>
-        </main>
+        <div className={styles.app}>
+            <Sidebar />
+            <Map />
+        </div>
     )
 }

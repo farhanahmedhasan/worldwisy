@@ -1,6 +1,8 @@
+import styles from "./Map.module.css"
+
 export default function Map() {
     return (
-        <div>
+        <div className={styles.mapContainer}>
             <h1>Map Placeholderr</h1>
         </div>
     )
