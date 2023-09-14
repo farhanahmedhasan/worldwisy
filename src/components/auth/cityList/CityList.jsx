@@ -2,10 +2,23 @@ import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
 import styles from "./CityList.module.css"
 
 import React from "react"
+import CityItem from "./CityItem.jsx"
+import Message from "../../../pages/shared/message/Message.jsx"
 
 export default function CityList({ cities, isLoading }) {
     if (isLoading) {
         return <Spinner />
     }
-    return <ul className={styles.cityList}>List of cities</ul>
+
+    if (!cities.length) {
+        return <Message message="Add your first city by clicking on a city on the map" />
+    }
+
+    return (
+        <ul className={styles.cityList}>
+            {cities.map((city) => (
+                <CityItem key={city.id} city={city} />
+            ))}
+        </ul>
+    )
 }
