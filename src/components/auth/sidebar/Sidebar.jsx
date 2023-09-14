@@ -1,4 +1,4 @@
-import Logo from "../../../pages/shared/Logo.jsx"
+import Logo from "../../../pages/shared/logo/Logo.jsx"
 import styles from "./Sidebar.module.css"
 import AppNav from "../appNav/AppNav.jsx"
 import Footer from "../footer/Footer.jsx"
