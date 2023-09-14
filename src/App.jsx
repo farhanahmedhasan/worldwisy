@@ -1,5 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-
+import CountryList from "./components/auth/countryList/CountryList.jsx"
 import CityList from "./components/auth/cityList/CityList.jsx"
 import AppLayout from "./pages/auth/AppLayout.jsx"
 import Error404 from "./pages/shared/Error404.jsx"
@@ -7,9 +6,10 @@ import Product from "./pages/guest/Product.jsx"
 import Pricing from "./pages/guest/Pricing.jsx"
 import Login from "./pages/guest/Login.jsx"
 import Home from "./pages/guest/Home.jsx"
-
-import React, { useEffect, useState } from "react"
 import "./index.css"
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import React, { useEffect, useState } from "react"
 
 const BASE_URL = "http://localhost:3001"
 
@@ -24,7 +24,6 @@ export default function App() {
                 const res = await fetch(`${BASE_URL}/cities`)
                 const cityData = await res.json()
                 setCities(cityData)
-                console.log(cityData)
             } catch (error) {
                 console.log(error)
             } finally {
@@ -44,7 +43,7 @@ export default function App() {
                 <Route path="/app" element={<AppLayout />}>
                     <Route index element={<CityList cities={cities} isLoading={isLoading} />} />
                     <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
-                    <Route path="countries" element={<p>List of countries</p>} />
+                    <Route path="countries" element={<CountryList cities={cities} isLoading={isLoading} />} />
                     <Route path="form" element={<form>Just a form</form>} />
                 </Route>
                 <Route path="*" element={<Error404 />} />
