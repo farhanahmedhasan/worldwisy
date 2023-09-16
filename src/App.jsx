@@ -1,5 +1,6 @@
 import CountryList from "./components/auth/countryList/CountryList.jsx"
 import CityList from "./components/auth/cityList/CityList.jsx"
+import City from "./components/auth/cityList/City.jsx"
 import AppLayout from "./pages/auth/AppLayout.jsx"
 import Error404 from "./pages/shared/Error404.jsx"
 import Product from "./pages/guest/Product.jsx"
@@ -43,6 +44,7 @@ export default function App() {
                 <Route path="/app" element={<AppLayout />}>
                     <Route index element={<CityList cities={cities} isLoading={isLoading} />} />
                     <Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
+                    <Route path="cities/:id" element={<City />} />
                     <Route path="countries" element={<CountryList cities={cities} isLoading={isLoading} />} />
                     <Route path="form" element={<form>Just a form</form>} />
                 </Route>
