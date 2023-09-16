@@ -4,10 +4,10 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 export default function CityItem({ city }) {
-    const { emoji, cityName, date, id } = city
+    const { emoji, cityName, date, position } = city
     return (
         <li>
-            <Link to={`${id}`} className={styles.cityItem}>
+            <Link to={`${cityName.toLowerCase()}?lat=${position.lat}&lng=${position.lng}`} className={styles.cityItem}>
                 <span className={styles.emoji}>{emoji}</span>
                 <h3 className={styles.name}>{cityName}</h3>
                 <time className={styles.date}>({formatDate(date)})</time>
