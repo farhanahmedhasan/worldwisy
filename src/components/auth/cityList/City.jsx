@@ -6,22 +6,17 @@ import styles from "./City.module.css"
 import Button from "../../shared/button/Button.jsx"
 import { formatDate } from "../../../utils/helpers.js"
 import { useCitiesContext } from "../../../context/CitiesContext.jsx"
+import ButtonBack from "../../shared/button/ButtonBack.jsx"
 
 export default function City() {
     const { isLoading, currentCity, getCity } = useCitiesContext()
-
     const { emoji, cityName, notes, date } = currentCity
 
     const params = useParams()
     const [searchParams] = useSearchParams()
-    const navigate = useNavigate()
 
     const lat = searchParams.get("lat")
     const lng = searchParams.get("lat")
-
-    function handleClick() {
-        navigate(-1)
-    }
 
     useEffect(() => {
         getCity(params.id)
@@ -61,9 +56,7 @@ export default function City() {
                 </div>
 
                 <div>
-                    <Button type="back" onClick={handleClick}>
-                        &larr; Back
-                    </Button>
+                    <ButtonBack />
                 </div>
             </div>
         </>

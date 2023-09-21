@@ -1,22 +1,14 @@
-import { convertToEmoji } from "../../../utils/helpers.js"
+import ButtonBack from "../../shared/button/ButtonBack.jsx"
 import Button from "../../shared/button/Button.jsx"
 import styles from "./Form.module.css"
 
-import { useNavigate } from "react-router-dom"
 import React, { useState } from "react"
 
 function Form() {
-    const navigate = useNavigate()
-
     const [cityName, setCityName] = useState("")
     const [country, setCountry] = useState("")
     const [date, setDate] = useState(new Date())
     const [notes, setNotes] = useState("")
-
-    function handleBack(e) {
-        e.preventDefault()
-        navigate(-1)
-    }
 
     return (
         <form className={styles.form}>
@@ -38,9 +30,7 @@ function Form() {
 
             <div className={styles.buttons}>
                 <Button type="primary">Add</Button>
-                <Button type="back" onClick={handleBack}>
-                    &larr; Back
-                </Button>
+                <ButtonBack />
             </div>
         </form>
     )
