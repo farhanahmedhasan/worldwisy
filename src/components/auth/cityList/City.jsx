@@ -1,15 +1,14 @@
 import { useNavigate, useParams, useSearchParams } from "react-router-dom"
-import React, { useEffect, useState } from "react"
+import React, { useEffect } from "react"
 
 import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
 import styles from "./City.module.css"
 import Button from "../../shared/button/Button.jsx"
 import { formatDate } from "../../../utils/helpers.js"
+import { useCitiesContext } from "../../../context/CitiesContext.jsx"
 
-const BASE_URL = "http://localhost:3001/cities"
 export default function City() {
-    const [currentCity, setCurrentCity] = useState({})
-    const [isLoading, setIsLoading] = useState(false)
+    const { isLoading, currentCity, getCity } = useCitiesContext()
 
     const { emoji, cityName, notes, date } = currentCity
 
@@ -25,19 +24,7 @@ export default function City() {
     }
 
     useEffect(() => {
-        async function getCity() {
-            setIsLoading(true)
-            try {
-                const res = await fetch(`${BASE_URL}/${params.id}`)
-                const city = await res.json()
-                setCurrentCity(city)
-            } catch (e) {
-                console.log(e)
-            } finally {
-                setIsLoading(false)
-            }
-        }
-        getCity()
+        getCity(params.id)
     }, [])
 
     if (isLoading) {
