@@ -1,11 +1,13 @@
 import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
 import styles from "./CityList.module.css"
 
-import React from "react"
-import CityItem from "./CityItem.jsx"
+import { useCitiesContext } from "../../../context/CitiesContext.jsx"
 import Message from "../../../pages/shared/message/Message.jsx"
+import CityItem from "./CityItem.jsx"
 
-export default function CityList({ cities, isLoading }) {
+export default function CityList() {
+    const { cities, isLoading } = useCitiesContext()
+
     if (isLoading) {
         return <Spinner />
     }
