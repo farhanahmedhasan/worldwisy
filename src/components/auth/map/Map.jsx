@@ -6,15 +6,13 @@ import { useCitiesContext } from "../../../context/CitiesContext.jsx"
 import useGeoLocation from "../../../hooks/useGeoLocation.js"
 import Button from "../../shared/button/Button.jsx"
 import styles from "./Map.module.css"
+import useUrlPosition from "../../../hooks/useUrlPosition.js"
 
 export default function Map() {
     const { cities } = useCitiesContext()
     const { position: geoLocationPosition, isLoading: isLoadingLocation, getLocation } = useGeoLocation()
     const [mapPosition, setMapPosition] = useState(["0", "0"])
-    const [searchParams, setSearchParams] = useSearchParams()
-
-    const mapLat = searchParams.get("lat")
-    const mapLng = searchParams.get("lng")
+    const { lat: mapLat, lng: mapLng, setSearchParams } = useUrlPosition()
 
     useEffect(() => {
         if (mapLat && mapLng) setMapPosition([mapLat, mapLng])
