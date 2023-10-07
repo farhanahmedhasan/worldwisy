@@ -7,6 +7,8 @@ import Button from "../../shared/button/Button.jsx"
 import styles from "./Form.module.css"
 
 import React, { useEffect, useReducer, useState } from "react"
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client"
 
@@ -67,7 +69,7 @@ function Form() {
 
             <div className={styles.row}>
                 <label htmlFor="date">When did you go to {state.cityName}?</label>
-                <input id="date" onChange={(e) => setDate(e.target.value)} value={date} />
+                <DatePicker id="date" selected={date} onChange={(date) => setDate(date)} dateFormat="dd/MM/yyyy" />
             </div>
 
             <div className={styles.row}>
