@@ -1,30 +1,27 @@
+import { initialStates, reducer } from "../../../Reducers/MapFormGeoReducer.js"
 import Message from "../../../pages/shared/message/Message.jsx"
 import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
 import useUrlPosition from "../../../hooks/useUrlPosition.js"
 import ButtonBack from "../../shared/button/ButtonBack.jsx"
-import { convertToEmoji } from "../../../utils/helpers.js"
 import Button from "../../shared/button/Button.jsx"
 import styles from "./Form.module.css"
 
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useReducer, useState } from "react"
 
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client"
 
 function Form() {
+    const [state, dispatch] = useReducer(reducer, initialStates)
+
     const [date, setDate] = useState(new Date())
     const [notes, setNotes] = useState("")
-
-    const [isLoadingGeoCoding, setIsLoadingGeoCoding] = useState(false)
-    const [cityName, setCityName] = useState("")
-    const [country, setCountry] = useState("")
-    const [emoji, setEmoji] = useState("")
-    const [geoCodingErrorMessage, setGeoCodingErrorMessage] = useState("")
+    const [city, setCity] = useState("")
 
     const { lat, lng } = useUrlPosition()
 
     useEffect(() => {
         async function fetchCityData() {
-            setIsLoadingGeoCoding(true)
+            dispatch({ type: "mapFormGeo/loadingData" })
             try {
                 const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`)
                 const data = await res.json()
@@ -36,39 +33,42 @@ function Form() {
                     )
                 }
 
-                setGeoCodingErrorMessage("")
-                setCityName(data.city || data.locality || "")
-                setCountry(data.countryName)
-                setEmoji(convertToEmoji(data.countryCode))
+                dispatch({
+                    type: "mapFormGeo/setData",
+                    payload: {
+                        country: data.countryName,
+                        cityName: data.city || data.locality || "",
+                        emoji: data.countryCode
+                    }
+                })
+                setCity(data.city)
             } catch (e) {
                 console.log(e)
-                setGeoCodingErrorMessage(e.message)
-            } finally {
-                setIsLoadingGeoCoding(false)
+                dispatch({ type: "mapFormGeo/failedSetData", payload: e.message })
             }
         }
 
         fetchCityData()
     }, [lat, lng])
 
-    if (isLoadingGeoCoding) return <Spinner />
-    if (geoCodingErrorMessage) return <Message message={geoCodingErrorMessage} />
+    if (state.isLoadingGeoCoding) return <Spinner />
+    if (state.geoCodingErrorMessage) return <Message message={state.geoCodingErrorMessage} />
 
     return (
         <form className={styles.form}>
             <div className={styles.row}>
                 <label htmlFor="cityName">City name</label>
-                <input id="cityName" onChange={(e) => setCityName(e.target.value)} value={cityName} />
-                <span className={styles.flag}>{emoji}</span>
+                <input id="cityName" onChange={(e) => setCity(e.target.value)} value={city} />
+                <span className={styles.flag}>{state.emoji}</span>
             </div>
 
             <div className={styles.row}>
-                <label htmlFor="date">When did you go to {cityName}?</label>
+                <label htmlFor="date">When did you go to {state.cityName}?</label>
                 <input id="date" onChange={(e) => setDate(e.target.value)} value={date} />
             </div>
 
             <div className={styles.row}>
-                <label htmlFor="notes">Notes about your trip to {cityName}</label>
+                <label htmlFor="notes">Notes about your trip to {state.cityName}</label>
                 <textarea id="notes" onChange={(e) => setNotes(e.target.value)} value={notes} />
             </div>
 

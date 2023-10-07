@@ -31,10 +31,7 @@
       "error",
       "double"
     ],
-    "indent": [
-      "error",
-      4
-    ],
+
     "no-unused-vars": "error",
     "array-bracket-spacing": "error",
     "react/boolean-prop-naming": [
