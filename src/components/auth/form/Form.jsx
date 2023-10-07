@@ -21,6 +21,8 @@ function Form() {
 
     useEffect(() => {
         async function fetchCityData() {
+            if (!(lat || lng)) return
+
             dispatch({ type: "mapFormGeo/loadingData" })
             try {
                 const res = await fetch(`${BASE_URL}?latitude=${lat}&longitude=${lng}`)
@@ -52,6 +54,7 @@ function Form() {
     }, [lat, lng])
 
     if (state.isLoadingGeoCoding) return <Spinner />
+    if (!(lat || lng)) return <Message message="Please start by clicking somewhere on the map" />
     if (state.geoCodingErrorMessage) return <Message message={state.geoCodingErrorMessage} />
 
     return (
