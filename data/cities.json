@@ -1,136 +1,76 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
-      "notes": "",
-      "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
-      },
-      "id": 17806751
-    },
-    {
-      "cityName": "Berlin",
-      "country": "Germany",
-      "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
-      "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
-      },
-      "id": 98443197
-    },
-    {
-      "cityName": "Timbuktu",
-      "country": "Mali",
-      "emoji": "🇲🇱",
-      "date": "2023-10-08T04:13:44.195Z",
-      "notes": "afe",
-      "position": {
-        "lat": "18.895892559415024",
-        "lng": "-3.9331054687500004"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Atebubu",
-      "country": "Ghana",
-      "emoji": "🇬🇭",
-      "date": "2023-10-08T04:20:02.948Z",
-      "notes": "Tese",
-      "position": {
-        "lat": "7.754537346539386",
-        "lng": "-0.9228515625000001"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Sonaimuri",
+      "cityName": "Lohagara",
       "country": "Bangladesh",
       "emoji": "🇧🇩",
-      "date": "2023-10-08T04:20:21.067Z",
-      "notes": "Muri khamu",
+      "date": "2023-10-08T05:22:13.230Z",
+      "notes": "Khub sundor",
       "position": {
-        "lat": "23.03929774776974",
-        "lng": "91.05468750000001"
+        "lat": "23.07973176244989",
+        "lng": "89.60449218750001"
       },
-      "id": 98443200
+      "id": 1
     },
     {
-      "cityName": "Mongkaing",
-      "country": "Myanmar",
-      "emoji": "🇲🇲",
-      "date": "2023-10-08T04:22:31.970Z",
-      "notes": "asd",
+      "cityName": "Delhi",
+      "country": "India",
+      "emoji": "🇮🇳",
+      "date": "2023-10-08T05:24:45.333Z",
+      "notes": "Heart of india",
       "position": {
-        "lat": "21.861498734372567",
-        "lng": "97.22900390625001"
+        "lat": "28.536274512989916",
+        "lng": "77.29980468750001"
       },
-      "id": 98443201
+      "id": 3
     },
     {
-      "cityName": "Momauk",
-      "country": "Myanmar",
-      "emoji": "🇲🇲",
-      "date": "2023-10-08T04:24:37.547Z",
-      "notes": "sdfg",
+      "cityName": "Turangi",
+      "country": "New Zealand",
+      "emoji": "🇳🇿",
+      "date": "2023-10-08T05:26:41.838Z",
+      "notes": "Greaaat",
       "position": {
-        "lat": "24.307053283225915",
-        "lng": "97.47070312500001"
+        "lat": "-38.89103282648846",
+        "lng": "175.95703125000003"
       },
-      "id": 98443202
+      "id": 4
     },
     {
-      "cityName": "Nanyun",
-      "country": "Myanmar",
-      "emoji": "🇲🇲",
-      "date": "2023-10-08T04:28:29.475Z",
-      "notes": "adf",
+      "cityName": "Tieyon",
+      "country": "Australia",
+      "emoji": "🇦🇺",
+      "date": "2023-10-08T05:26:53.189Z",
+      "notes": "Cangarooo",
       "position": {
-        "lat": "26.941659545381516",
-        "lng": "95.84472656250001"
+        "lat": "-26.902476886279807",
+        "lng": "134.38476562500003"
       },
-      "id": 98443203
+      "id": 5
     },
     {
-      "cityName": "Nyinahin",
-      "country": "Ghana",
-      "emoji": "🇬🇭",
-      "date": "2023-10-08T04:31:00.613Z",
-      "notes": "gh",
+      "cityName": "Tura",
+      "country": "Russian Federation (the)",
+      "emoji": "🇷🇺",
+      "date": "2023-10-08T05:27:55.358Z",
+      "notes": "Uraaaaa",
       "position": {
-        "lat": "6.555474602201876",
-        "lng": "-2.2631835937500004"
+        "lat": "66.51326044311188",
+        "lng": "103.35937500000001"
       },
-      "id": 98443204
+      "id": 6
     },
     {
-      "cityName": "Adamdighi",
-      "country": "Bangladesh",
-      "emoji": "🇧🇩",
-      "date": "2023-10-08T04:33:59.820Z",
-      "notes": "Digi boro",
+      "cityName": "Las Vegas",
+      "country": "United States of America (the)",
+      "emoji": "🇺🇸",
+      "date": "2023-10-08T05:28:05.686Z",
+      "notes": "Gimme 💰",
       "position": {
-        "lat": "24.80668135385199",
-        "lng": "89.05517578125001"
+        "lat": "36.10237644873644",
+        "lng": "-115.04882812500001"
       },
-      "id": 98443205
+      "id": 7
     }
   ]
 }
