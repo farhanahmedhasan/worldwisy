@@ -35,6 +35,102 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Timbuktu",
+      "country": "Mali",
+      "emoji": "🇲🇱",
+      "date": "2023-10-08T04:13:44.195Z",
+      "notes": "afe",
+      "position": {
+        "lat": "18.895892559415024",
+        "lng": "-3.9331054687500004"
+      },
+      "id": 98443198
+    },
+    {
+      "cityName": "Atebubu",
+      "country": "Ghana",
+      "emoji": "🇬🇭",
+      "date": "2023-10-08T04:20:02.948Z",
+      "notes": "Tese",
+      "position": {
+        "lat": "7.754537346539386",
+        "lng": "-0.9228515625000001"
+      },
+      "id": 98443199
+    },
+    {
+      "cityName": "Sonaimuri",
+      "country": "Bangladesh",
+      "emoji": "🇧🇩",
+      "date": "2023-10-08T04:20:21.067Z",
+      "notes": "Muri khamu",
+      "position": {
+        "lat": "23.03929774776974",
+        "lng": "91.05468750000001"
+      },
+      "id": 98443200
+    },
+    {
+      "cityName": "Mongkaing",
+      "country": "Myanmar",
+      "emoji": "🇲🇲",
+      "date": "2023-10-08T04:22:31.970Z",
+      "notes": "asd",
+      "position": {
+        "lat": "21.861498734372567",
+        "lng": "97.22900390625001"
+      },
+      "id": 98443201
+    },
+    {
+      "cityName": "Momauk",
+      "country": "Myanmar",
+      "emoji": "🇲🇲",
+      "date": "2023-10-08T04:24:37.547Z",
+      "notes": "sdfg",
+      "position": {
+        "lat": "24.307053283225915",
+        "lng": "97.47070312500001"
+      },
+      "id": 98443202
+    },
+    {
+      "cityName": "Nanyun",
+      "country": "Myanmar",
+      "emoji": "🇲🇲",
+      "date": "2023-10-08T04:28:29.475Z",
+      "notes": "adf",
+      "position": {
+        "lat": "26.941659545381516",
+        "lng": "95.84472656250001"
+      },
+      "id": 98443203
+    },
+    {
+      "cityName": "Nyinahin",
+      "country": "Ghana",
+      "emoji": "🇬🇭",
+      "date": "2023-10-08T04:31:00.613Z",
+      "notes": "gh",
+      "position": {
+        "lat": "6.555474602201876",
+        "lng": "-2.2631835937500004"
+      },
+      "id": 98443204
+    },
+    {
+      "cityName": "Adamdighi",
+      "country": "Bangladesh",
+      "emoji": "🇧🇩",
+      "date": "2023-10-08T04:33:59.820Z",
+      "notes": "Digi boro",
+      "position": {
+        "lat": "24.80668135385199",
+        "lng": "89.05517578125001"
+      },
+      "id": 98443205
     }
   ]
 }
