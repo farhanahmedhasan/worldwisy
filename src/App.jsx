@@ -12,26 +12,29 @@ import "./index.css"
 
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import { CitiesProvider } from "./context/CitiesContext.jsx"
+import { AuthProvider } from "./context/FakeAuthContext.jsx"
 
 export default function App() {
     return (
         <BrowserRouter>
-            <CitiesProvider>
-                <Routes>
-                    <Route path="/" exact element={<Home />} />
-                    <Route path="/product" element={<Product />} />
-                    <Route path="/pricing" element={<Pricing />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/app" element={<AppLayout />}>
-                        <Route index element={<Navigate replace to="cities" />} />
-                        <Route path="cities" element={<CityList />} />
-                        <Route path="cities/:id" element={<City />} />
-                        <Route path="countries" element={<CountryList />} />
-                        <Route path="form" element={<Form />} />
-                    </Route>
-                    <Route path="*" element={<Error404 />} />
-                </Routes>
-            </CitiesProvider>
+            <AuthProvider>
+                <CitiesProvider>
+                    <Routes>
+                        <Route path="/" exact element={<Home />} />
+                        <Route path="/product" element={<Product />} />
+                        <Route path="/pricing" element={<Pricing />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/app" element={<AppLayout />}>
+                            <Route index element={<Navigate replace to="cities" />} />
+                            <Route path="cities" element={<CityList />} />
+                            <Route path="cities/:id" element={<City />} />
+                            <Route path="countries" element={<CountryList />} />
+                            <Route path="form" element={<Form />} />
+                        </Route>
+                        <Route path="*" element={<Error404 />} />
+                    </Routes>
+                </CitiesProvider>
+            </AuthProvider>
         </BrowserRouter>
     )
 }

@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useReducer } from "react"
-import { citiesReducer, citiesStates } from "../Reducers/CitiesReducer.jsx"
+import { citiesReducer, citiesStates } from "../Reducers/CitiesReducer.js"
 const BASE_URL = "http://localhost:3001"
 
 const CitiesContext = createContext(null)
