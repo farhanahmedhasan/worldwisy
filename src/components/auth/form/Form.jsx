@@ -1,4 +1,4 @@
-import { initialStates, reducer } from "../../../Reducers/MapFormGeoReducer.js"
+import { initialStates, mapFormGeoReducer } from "../../../Reducers/MapFormGeoReducer.js"
 import Message from "../../../pages/shared/message/Message.jsx"
 import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
 import useUrlPosition from "../../../hooks/useUrlPosition.js"
@@ -15,7 +15,7 @@ import { useNavigate } from "react-router-dom"
 const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client"
 
 function Form() {
-    const [state, dispatch] = useReducer(reducer, initialStates)
+    const [state, dispatch] = useReducer(mapFormGeoReducer, initialStates)
 
     const [date, setDate] = useState(new Date())
     const [notes, setNotes] = useState("")

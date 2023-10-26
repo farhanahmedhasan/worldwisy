@@ -8,7 +8,7 @@ export const initialStates = {
     geoCodingErrorMessage: ""
 }
 
-export function reducer(state, action) {
+export function mapFormGeoReducer(state, action) {
     switch (action.type) {
         case "mapFormGeo/loadingData":
             return {

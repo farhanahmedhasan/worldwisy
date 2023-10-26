@@ -13,18 +13,6 @@
       "id": 1
     },
     {
-      "cityName": "Delhi",
-      "country": "India",
-      "emoji": "🇮🇳",
-      "date": "2023-10-08T05:24:45.333Z",
-      "notes": "Heart of india",
-      "position": {
-        "lat": "28.536274512989916",
-        "lng": "77.29980468750001"
-      },
-      "id": 3
-    },
-    {
       "cityName": "Turangi",
       "country": "New Zealand",
       "emoji": "🇳🇿",
@@ -49,28 +37,28 @@
       "id": 5
     },
     {
-      "cityName": "Tura",
-      "country": "Russian Federation (the)",
-      "emoji": "🇷🇺",
-      "date": "2023-10-08T05:27:55.358Z",
-      "notes": "Uraaaaa",
+      "cityName": "Changji",
+      "country": "China",
+      "emoji": "🇨🇳",
+      "date": "2023-10-26T02:12:35.351Z",
+      "notes": "",
       "position": {
-        "lat": "66.51326044311188",
-        "lng": "103.35937500000001"
-      },
-      "id": 6
-    },
-    {
-      "cityName": "Las Vegas",
-      "country": "United States of America (the)",
-      "emoji": "🇺🇸",
-      "date": "2023-10-08T05:28:05.686Z",
-      "notes": "Gimme 💰",
-      "position": {
-        "lat": "36.10237644873644",
-        "lng": "-115.04882812500001"
+        "lat": "45.02695045318546",
+        "lng": "87.27539062500001"
       },
       "id": 7
+    },
+    {
+      "cityName": "Praia",
+      "country": "Cabo Verde",
+      "emoji": "🇨🇻",
+      "date": "2023-10-26T03:14:18.737Z",
+      "notes": "",
+      "position": {
+        "lat": "14.902321826141808",
+        "lng": "-23.5546875"
+      },
+      "id": 8
     }
   ]
 }
