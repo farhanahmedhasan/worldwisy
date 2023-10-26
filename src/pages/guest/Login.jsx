@@ -1,13 +1,31 @@
-import React, { useState } from "react"
-
-import styles from "./Login.module.css"
-import { Link } from "react-router-dom"
+import { useAuthContext } from "../../context/FakeAuthContext.jsx"
+import Button from "../../components/shared/button/Button.jsx"
 import PageNav from "../../components/guest/PageNav.jsx"
+import styles from "./Login.module.css"
+
+import React, { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function Login() {
     // PRE-FILL FOR DEV PURPOSES
-    const [email, setEmail] = useState("jack@example.com")
-    const [password, setPassword] = useState("qwerty")
+    const [email, setEmail] = useState("hasan@gmail.com")
+    const [password, setPassword] = useState("hasan")
+
+    const navigate = useNavigate()
+    const { login, isUserAuthenticated, error } = useAuthContext()
+
+    function handleLogin(e) {
+        e.preventDefault()
+        if (email && password) login(email, password)
+    }
+
+    useEffect(() => {
+        if (isUserAuthenticated) {
+            navigate("/app", {
+                replace: true
+            })
+        }
+    }, [isUserAuthenticated])
 
     return (
         <main className={styles.login}>
@@ -27,11 +45,12 @@ export default function Login() {
                         value={password}
                     />
                 </div>
+                <span className={styles.error}>{error}</span>
 
                 <div>
-                    <Link to="/app" type="button" className="cta">
+                    <Button type="primary" onClick={handleLogin}>
                         Login
-                    </Link>
+                    </Button>
                 </div>
             </form>
         </main>
