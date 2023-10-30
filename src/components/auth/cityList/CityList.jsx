@@ -1,4 +1,4 @@
-import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
+import Spinner from "../../shared/spinner/Spinner.jsx"
 import styles from "./CityList.module.css"
 
 import { useCitiesContext } from "../../../context/CitiesContext.jsx"

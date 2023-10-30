@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import React, { useEffect } from "react"
 
 import { useCitiesContext } from "../../../context/CitiesContext.jsx"
-import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
+import Spinner from "../../shared/spinner/Spinner.jsx"
 import ButtonBack from "../../shared/button/ButtonBack.jsx"
 import { formatDate } from "../../../utils/helpers.js"
 import styles from "./City.module.css"

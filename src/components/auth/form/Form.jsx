@@ -1,6 +1,6 @@
 import { initialStates, mapFormGeoReducer } from "../../../Reducers/MapFormGeoReducer.js"
 import Message from "../../../pages/shared/message/Message.jsx"
-import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
+import Spinner from "../../shared/spinner/Spinner.jsx"
 import useUrlPosition from "../../../hooks/useUrlPosition.js"
 import ButtonBack from "../../shared/button/ButtonBack.jsx"
 import Button from "../../shared/button/Button.jsx"
