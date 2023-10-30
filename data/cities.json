@@ -13,66 +13,6 @@
       "id": 1
     },
     {
-      "cityName": "Turangi",
-      "country": "New Zealand",
-      "emoji": "🇳🇿",
-      "date": "2023-10-08T05:26:41.838Z",
-      "notes": "Greaaat",
-      "position": {
-        "lat": "-38.89103282648846",
-        "lng": "175.95703125000003"
-      },
-      "id": 4
-    },
-    {
-      "cityName": "Tieyon",
-      "country": "Australia",
-      "emoji": "🇦🇺",
-      "date": "2023-10-08T05:26:53.189Z",
-      "notes": "Cangarooo",
-      "position": {
-        "lat": "-26.902476886279807",
-        "lng": "134.38476562500003"
-      },
-      "id": 5
-    },
-    {
-      "cityName": "Changji",
-      "country": "China",
-      "emoji": "🇨🇳",
-      "date": "2023-10-26T02:12:35.351Z",
-      "notes": "",
-      "position": {
-        "lat": "45.02695045318546",
-        "lng": "87.27539062500001"
-      },
-      "id": 7
-    },
-    {
-      "cityName": "Praia",
-      "country": "Cabo Verde",
-      "emoji": "🇨🇻",
-      "date": "2023-10-26T03:14:18.737Z",
-      "notes": "",
-      "position": {
-        "lat": "14.902321826141808",
-        "lng": "-23.5546875"
-      },
-      "id": 8
-    },
-    {
-      "cityName": "Ka I-n",
-      "country": "Burkina Faso",
-      "emoji": "🇧🇫",
-      "date": "2023-10-26T05:08:20.910Z",
-      "notes": "drf",
-      "position": {
-        "lat": "13.966054081318314",
-        "lng": "-2.7685546875000004"
-      },
-      "id": 9
-    },
-    {
       "cityName": "Rikaze",
       "country": "China",
       "emoji": "🇨🇳",
@@ -83,6 +23,18 @@
         "lng": "88.90136718750001"
       },
       "id": 10
+    },
+    {
+      "cityName": "Fatick",
+      "country": "Senegal",
+      "emoji": "🇸🇳",
+      "date": "2023-10-30T08:28:39.434Z",
+      "notes": "",
+      "position": {
+        "lat": "14.583583455156525",
+        "lng": "-16.369628906250004"
+      },
+      "id": 11
     }
   ]
 }

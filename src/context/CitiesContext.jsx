@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer } from "react"
+import { createContext, useCallback, useContext, useEffect, useReducer } from "react"
 import { citiesReducer, citiesStates } from "../Reducers/CitiesReducer.js"
 const BASE_URL = "http://localhost:3001"
 
@@ -7,18 +7,22 @@ const CitiesContext = createContext(null)
 function CitiesProvider({ children }) {
     const [{ cities, isLoading, currentCity }, dispatch] = useReducer(citiesReducer, citiesStates)
 
-    async function getCity(id) {
-        if (Number(id) === currentCity.id) return
+    const getCity = useCallback(
+        async (id) => {
+            if (Number(id) === currentCity.id) return
 
-        dispatch({ type: "loading" })
-        try {
-            const res = await fetch(`${BASE_URL}/cities/${id}`)
-            const city = await res.json()
-            dispatch({ type: "city/loaded", payload: city })
-        } catch (e) {
-            dispatch({ type: "rejected", payload: e.message })
-        }
-    }
+            dispatch({ type: "loading" })
+            try {
+                const res = await fetch(`${BASE_URL}/cities/${id}`)
+                const city = await res.json()
+                dispatch({ type: "city/loaded", payload: city })
+            } catch (e) {
+                dispatch({ type: "rejected", payload: e.message })
+            }
+        },
+        [currentCity.id]
+    )
+
     async function getCities() {
         dispatch({ type: "loading" })
         try {

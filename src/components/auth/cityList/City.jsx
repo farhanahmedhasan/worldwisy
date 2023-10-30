@@ -1,26 +1,21 @@
-import { useNavigate, useParams, useSearchParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 import React, { useEffect } from "react"
 
-import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
-import styles from "./City.module.css"
-import Button from "../../shared/button/Button.jsx"
-import { formatDate } from "../../../utils/helpers.js"
 import { useCitiesContext } from "../../../context/CitiesContext.jsx"
+import Spinner from "../../../pages/shared/spinner/Spinner.jsx"
 import ButtonBack from "../../shared/button/ButtonBack.jsx"
+import { formatDate } from "../../../utils/helpers.js"
+import styles from "./City.module.css"
 
 export default function City() {
     const { isLoading, currentCity, getCity } = useCitiesContext()
     const { emoji, cityName, notes, date } = currentCity
 
     const params = useParams()
-    const [searchParams] = useSearchParams()
-
-    const lat = searchParams.get("lat")
-    const lng = searchParams.get("lat")
 
     useEffect(() => {
         getCity(params.id)
-    }, [])
+    }, [params.id, getCity])
 
     if (isLoading) {
         return <Spinner />
